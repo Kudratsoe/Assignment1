@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }   
+        Th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        td {
+            text-align: left;
+        }
+        td.center {text-align: center;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Book List</h1>
+</header>
+<main>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Year Written</th>
+                <th>Edition</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% books.forEach(function (book) {%>
+                <tr>
+                    <td class="center"><%= book.id %></td>
+                    <td><%= book.title %></td>
+                    <td><%= book.author %></td>
+                    <td class="center"><%= book.year_written %></td>
+                    <td class="center"><%= book.edition %></td>
+                    <td class="center"><%= book.price %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+</body>
+</html>
